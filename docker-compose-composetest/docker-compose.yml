@@ -1,0 +1,14 @@
+version: '2'
+
+# Create two service: web, redis
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/code
+    depends_on:        # web service depends on redis service, so redis service will be launch first.
+      - redis_123
+  redis_123:
+    image: redis
