@@ -1,0 +1,7 @@
+Step 1: Setup the proxy
+sudo vi /etc/default/docker
+export http_proxy="http://10.110.15.61:8080/"
+
+
+Step 2: Restart the docker
+sudo service docker restart
